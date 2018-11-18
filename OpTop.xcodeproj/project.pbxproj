@@ -6,9 +6,16 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FB6144F821A2079700979E7C /* NSWindow+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6144F721A2079700979E7C /* NSWindow+Helper.swift */; };
+		FB6144FA21A20AEC00979E7C /* OnTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6144F921A20AEC00979E7C /* OnTop.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		FB6144EE21A2076000979E7C /* OpTop.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpTop.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6144F121A2076000979E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB6144F721A2079700979E7C /* NSWindow+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSWindow+Helper.swift"; sourceTree = "<group>"; };
+		FB6144F921A20AEC00979E7C /* OnTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +49,8 @@
 			isa = PBXGroup;
 			children = (
 				FB6144F121A2076000979E7C /* Info.plist */,
+				FB6144F921A20AEC00979E7C /* OnTop.swift */,
+				FB6144F721A2079700979E7C /* NSWindow+Helper.swift */,
 			);
 			path = OpTop;
 			sourceTree = "<group>";
@@ -77,6 +86,7 @@
 				TargetAttributes = {
 					FB6144ED21A2076000979E7C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -112,6 +122,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB6144FA21A20AEC00979E7C /* OnTop.swift in Sources */,
+				FB6144F821A2079700979E7C /* NSWindow+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,14 +244,22 @@
 		FB6144F521A2076000979E7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S9R38C8Z5T;
 				INFOPLIST_FILE = OpTop/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.sebastienkb.OpTop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
@@ -247,14 +267,21 @@
 		FB6144F621A2076000979E7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S9R38C8Z5T;
 				INFOPLIST_FILE = OpTop/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = be.sebastienkb.OpTop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
