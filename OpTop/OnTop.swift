@@ -13,6 +13,6 @@ class OnTop {
     static let shared = OnTop()
 
     func toggleOnTop() {
-        NSWindow.currentFloatableWindow?.toggleFloating()
+        NSWindow.currentWindow?.toggleFloating()
     }
 }
